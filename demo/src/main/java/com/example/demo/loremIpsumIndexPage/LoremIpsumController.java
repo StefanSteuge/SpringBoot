@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoremIpsumController {
 
     @GetMapping
-    public String loremIpsum (){
-     return "Lorem Ipsum";
+    public String loremIpsum() {
+        return "Lorem Ipsum";
     }
 }

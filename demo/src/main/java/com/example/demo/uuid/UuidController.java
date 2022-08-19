@@ -13,9 +13,9 @@ public class UuidController {
     @Autowired
     private UuidService uuidService;
 
-@GetMapping("/uuid")
+    @GetMapping("/uuid")
     public List<UUID> uuidList() {
-       return uuidService.getUuids();
+        return uuidService.getUuids();
     }
 
 }

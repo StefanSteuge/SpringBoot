@@ -10,7 +10,7 @@ import java.util.UUID;
 public class UuidService {
 
     public List<UUID> getUuids() {
-       return Collections.singletonList(UUID.randomUUID());
+        return Collections.singletonList(UUID.randomUUID());
 
     }
 
