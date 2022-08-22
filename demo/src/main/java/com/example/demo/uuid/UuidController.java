@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,6 +16,7 @@ public class UuidController {
     @Autowired
     private final UuidService uuidService;
 
+
     public UuidController(UuidService uuidService) {
         this.uuidService = uuidService;
     }
@@ -24,11 +24,7 @@ public class UuidController {
     @GetMapping("/uuid")
     @ResponseBody
     public List<UUID> uuidList(@RequestParam("size") int size) {
-        List<UUID> uuidList = new ArrayList<>();
-        for (int i = 0; i < size; i++) {
-            uuidList.add(uuidService.getUuids());
-        }
-        return uuidList;
+        return uuidService.getUuids(size);
     }
 
     //@Controller that returns index page with Lorem ipsum text
